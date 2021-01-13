@@ -1,17 +1,13 @@
-class Movie:
-    def __init__(self,title,year,imdb_score,have_seen):
-        self.title = title
-        self.year = year
-        self.imdb_score = imdb_score
-        self.have_seen = have_seen
-    
-    def nice_print(self):
-        print("Title: ", self.title)
-        print("Year of production: ", self.year)
-        print("IMDB Score: ", self.imdb_score)
-        print("I have seen it: ", self.have_seen)
-        
-film_1 = Movie("Life of Brian",1979,8.1,True)
-film_2 = Movie("The Holy Grail",1975,8.2,True)
+import random, string
 
-film_1.nice_print()
+smallcaps = 'abcdefghijklmnopqrstuvwxyz'
+largecaps = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+digits = '0123456789'
+letters_numbers = string.ascii_letters + string.digits
+word = ''
+for i in range(7):
+    word += random.choice(letters_numbers)
+word1 = ''.join(random.sample(letters_numbers,7))
+#word = random.choices(letter_numbers, k=7)    
+print(word)
+print(word1)
